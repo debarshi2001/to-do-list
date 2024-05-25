@@ -1,60 +1,123 @@
 * {
     margin: 0;
     padding: 0;
+    cursor:pointer;
 }
 
 .container {
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     flex-direction: column;
 }
 
 .Heading {
-    height: 30vh;
-    background: #d4f3aa;
+    position:absolute;
+    top:0;
+    width:100%;
+    height: 15vh;
+    background: #9adb40;
     display: flex;
     flex-direction: column;
     /* justify-content: start; */
     align-items: start;
 }
+.Heading::before{
+    content: '';
+    position: absolute;
+    top:0px;
+    left:600px;
+    width:300px;
+    height:inherit;
+    transform:skew(-10deg,0deg);
+    background-color:rgb(251, 223, 9);
+    z-index:5;
+    animation: barLive 10s infinite ease-in-out;
+}
+.Heading::after{
+    content: '';
+    position: absolute;
+    top:0px;
+    left:700px;
+    width:590px;
+    height:inherit;
+    transform:skew(-10deg,0deg);
+    background-color:rgb(255, 0, 0);
+    z-index:6;
+    /* animation: barLive 15s infinite ease-in-out; */
+}
+@keyframes barLive {
+    0%{
+        left:600px;
+    }
+    50%{
+        left:850px;
+    }
+    100%{
+        left:600px;
+    }
+    
+}
+.InputPlace{
+    position:fixed;
+    /* top: 80vh; */
+    bottom: 0;
+    width: 100%;
+    height:15vh; 
+    background: #ffffff;
+    z-index: 4;
+    
+}
 
-.Heading form {
+.InputPlace form {
     width: 80%;
     padding: 20px;
     margin: 0px auto 0px auto;
+    display: flex;
+    justify-content: space-evenly;
+
 }
 
-.Heading form input {
+.InputPlace form input {
     font-size: 30px;
     width: 79%;
-    padding: 3px;
+    padding: 5px;
     border: 1px solid;
     border-radius: 5px;
-    background: #e4c9f3;
+    background: #ccbed3;
+}
+.InputPlace form input::-webkit-input-placeholder {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:rgb(94, 89, 89)
 }
 
-.Heading form button {
+.InputPlace form button {
     font-size: 30px;
-    width: 15%;
-    padding: 3px;
+    width: 5%;
+    padding: 5px;
     border: 1px solid;
     border-radius: 5px;
 }
 
-.Heading form button:active {
+.InputPlace form button:active {
     background: #6afe99;
 }
 
 .Heading h2 {
     font-size: 4rem;
-    font-family: serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.Heading h4 {
+    font-size: 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left:10px;
+
 }
 
 .list_body {
     /* background: #635ec5; */
     margin: 0px auto 0px auto;
-    width: 50%;
+    width: 100%;
     height: 100%;
     display:flex;
     flex-direction: column;
@@ -66,15 +129,16 @@
 .card {
     width:90%;
     margin: 10px;
-    background-color: rgb(114, 99, 23);
+    background-color: rgb(240, 235, 214);
     border-radius: 10px;
+    border:brown 1px solid;
     padding: 20px;
     display: flex;
     /* flex-direction: column; */
     justify-content: space-between;
     font-size: 30px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: antiquewhite;
+    color: rgb(18, 17, 17);
 }
 .card span{
     cursor: pointer;

@@ -4,24 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Debarshi Halder</title>
+    <title>To DO List</title>
   </head>
   <body>
     <div class="container">
       <div class="Heading">
         <h2>TO-DO-LIST</h2>
-        <form >
-          <input type="text" id="Task" placeholder="Task...">
-          <button type="button" onclick="newList()">Add</button>
-        </form>
+        <h4>Made by-Debarshi Halder</h4>
       </div>
       <div class="list_body" id="main_div">
         <h4 id="msg">...Stack your Task list...</h4>
-       
-
       </div>
     </div>
-    
+    <div class="InputPlace">
+      <form>
+        <input
+          type="text"
+          id="Task"
+          placeholder="  write you task here..."
+          font-family="impact"
+          autocomplete="off"
+        />
+        <button type="button" onclick="newList()">+</button>
+      </form>
+    </div>
+
     <script src="./script.js"></script>
   </body>
 </html>
