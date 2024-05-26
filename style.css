@@ -12,7 +12,7 @@
 }
 
 .Heading {
-    position:absolute;
+    /* position:absolute; */
     top:0;
     width:100%;
     height: 15vh;
@@ -32,14 +32,14 @@
     transform:skew(-10deg,0deg);
     background-color:rgb(251, 223, 9);
     z-index:5;
-    animation: barLive 10s infinite ease-in-out;
+    animation: barLive 15s infinite ease-in-out;
 }
 .Heading::after{
     content: '';
     position: absolute;
     top:0px;
-    left:700px;
-    width:730px;
+    right:0;
+    width:40%;
     height:inherit;
     transform:skew(-10deg,0deg);
     background-color:rgb(255, 0, 0);
@@ -71,20 +71,22 @@
 
 .InputPlace form {
     width: 80%;
-    padding: 20px;
+    padding: 10px;
+    border-radius: 30px 30px 30px 30px;
     margin: 0px auto 0px auto;
     display: flex;
     justify-content: space-evenly;
+    /* background-color: antiquewhite; */
 
 }
 
 .InputPlace form input {
     font-size: 30px;
-    width: 79%;
-    padding: 5px;
+    width: 85%;
+    padding: inherit;
     border: 1px solid;
-    border-radius: 5px;
-    background: #ccbed3;
+    border-radius: 30px 0px 0px 30px;
+    background: #98e7ec;
 }
 .InputPlace form input::-webkit-input-placeholder {
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -93,14 +95,14 @@
 
 .InputPlace form button {
     font-size: 30px;
-    width: 5%;
+    width: 15%;
     padding: 5px;
     border: 1px solid;
-    border-radius: 5px;
+    border-radius: 0px 30px 30px 0px;
 }
 
 .InputPlace form button:active {
-    background: #6afe99;
+    background: #9adb40;
 }
 
 .Heading h2 {
@@ -118,12 +120,13 @@
     /* background: #635ec5; */
     margin: 0px auto 0px auto;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display:flex;
     flex-direction: column;
     align-items: center;
     border-right: 1px solid;
     border-left: 1px solid;
+
 }
 
 .card {
